@@ -1,0 +1,50 @@
+{
+  "camera": {
+    "device": "/dev/video0",
+    "width": 640,
+    "height": 360,
+    "fps": 30
+  },
+  "stream_camera": {
+    "device": "/dev/video2",
+    "width": 320,
+    "height": 240,
+    "fps": 30
+  },
+  "model": {
+    "path": "models/steel_ball.rknn",
+    "input_size": [
+      320,
+      320
+    ],
+    "roi": [
+      13,
+      72,
+      614,
+      216
+    ],
+    "confidence": 0.45,
+    "nms": 0.45,
+    "target_class": 0,
+    "pad_value": 128
+  },
+  "serial": {
+    "device": "/dev/ttyS1",
+    "baudrate": 115200,
+    "rate_hz": 20,
+    "max_age_s": 0.35,
+    "loss_policy": "legacy_silent"
+  },
+  "rtsp": {
+    "enabled": true,
+    "bind": "0.0.0.0",
+    "port": 8554,
+    "mount": "/test",
+    "width": 320,
+    "height": 240,
+    "fps": 15,
+    "bitrate_kbps": 400,
+    "encoder": "x264enc"
+  },
+  "display": true
+}

@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taishan-ball-balance"
+version = "0.1.0"
+description = "RK3566 Linux vision and RTSP bridge for MSPM0 ball balancing"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+dependencies = ["numpy>=1.23,<2", "pyserial>=3.5,<4"]
+
+[project.scripts]
+ball-balance = "ball_balance.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["taishan"]
